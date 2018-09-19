@@ -109,3 +109,8 @@ C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.WebUI\bin\Moq.pdb
 C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.WebUI\bin\Moq.xml
 C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.WebUI\bin\System.Threading.Tasks.Extensions.xml
 C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.WebUI\bin\System.ValueTuple.xml
+C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.WebUI\bin\EntityFramework.dll
+C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.WebUI\bin\FlowerStore.Domain.dll.config
+C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.WebUI\bin\EntityFramework.xml
+C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.WebUI\bin\EntityFramework.SqlServer.dll
+C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.WebUI\bin\EntityFramework.SqlServer.xml

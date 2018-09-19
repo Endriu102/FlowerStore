@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web.Mvc;
 using System.Web.Routing;
 using FlowerStore.Domain.Abstract;
+using FlowerStore.Domain.Concrete;
 using FlowerStore.Domain.Entities;
 using Moq;
 using Ninject;
@@ -28,15 +29,7 @@ namespace FlowerStore.WebUI.Infrastructure
 
         private void AddBindings()
         {
-            Mock<IProductRepository> mock = new Mock<IProductRepository>();
-            mock.Setup(m => m.Products).Returns(new List<Product>
-            {
-                new Product {Name = "Goździk", Price = 2},
-                new Product {Name = "Tulipan", Price = 3},
-                new Product {Name = "Róża", Price = 5}
-            }.AsQueryable());
-
-            ninjectKernel.Bind<IProductRepository>().ToConstant(mock.Object);
+            ninjectKernel.Bind<IProductRepository>().To<EFProductRepository>();
         }
 
 

@@ -1,6 +1,11 @@
 C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.Domain\bin\Debug\FlowerStore.Domain.dll
 C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.Domain\bin\Debug\FlowerStore.Domain.pdb
-C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.Domain\obj\Debug\FlowerStore.Domain.csprojAssemblyReference.cache
 C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.Domain\obj\Debug\FlowerStore.Domain.csproj.CoreCompileInputs.cache
 C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.Domain\obj\Debug\FlowerStore.Domain.dll
 C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.Domain\obj\Debug\FlowerStore.Domain.pdb
+C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.Domain\bin\Debug\FlowerStore.Domain.dll.config
+C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.Domain\bin\Debug\EntityFramework.dll
+C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.Domain\bin\Debug\EntityFramework.xml
+C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.Domain\obj\Debug\FlowerStore.Domain.csproj.CopyComplete
