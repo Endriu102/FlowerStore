@@ -9,8 +9,8 @@ create table Products(
 )
 
 
-insert into Products (Name, Price)
-values ('GoŸdzik',3),('Ró¿a',10),('Tulipan',5),('Hiacynt',4),('S³oneczniki',7),('¯onkil',10),('Piwonia',12),('Gladiole',15)
+insert into Products (Name, Price, Category)
+values ('GoŸdzik',3,'Kwiaty ciête'),('Ró¿a',10,'Kwiaty ciête'),('Tulipan',5,'Kwiaty ciête'),('Hiacynt',4,'Kwiaty ciête'),('S³oneczniki',7,'Kwiaty ciête'),('¯onkil',10,'Kwiaty ciête'),('Piwonia',12,'Kwiaty ciête'),('Gladiole',15,'Kwiaty ciête'),('Fikus',20,'Bonsai'),('D¹b',40,'Bonsai'),('Klon',30,'Bonsai'),('Wrzos',10,'Bonsai'),('Ró¿a',20,'Kwiaty doniczkowe'),('Pelargonia',12,'Kwiaty doniczkowe')
 
 
 select * from Products

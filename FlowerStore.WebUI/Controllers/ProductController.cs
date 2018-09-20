@@ -19,17 +19,22 @@ namespace FlowerStore.WebUI.Controllers
             this.repository = productRepository;
         }
 
-        public ViewResult List(int page = 1)
+        public ViewResult List(string category, int page = 1)
         {
             ProductListViewModel viewModel = new ProductListViewModel
             {
-                Products = repository.Products.OrderBy(p => p.ProductID).Skip((page - 1) * PageSize).Take(PageSize),
+                Products = repository.Products.Where(x => category == null || x.Category == category).
+                    OrderBy(x => x.ProductID)
+                    .Skip((page - 1) * PageSize)
+                    .Take(PageSize),
                 PagingInfo = new PagingInfo
                 {
                         CurrentPage = page,
                         ItemsPerPage = PageSize,
                         TotalItems = repository.Products.Count()
-                }
+                },
+
+                CurrentCategory = category
 
             };
 
