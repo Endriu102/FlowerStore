@@ -16,8 +16,9 @@ namespace FlowerStore.WebUI.Controllers
             this.productRepository = productRepository;
         }
 
-        public PartialViewResult Menu()
+        public PartialViewResult Menu(string category = null)
         {
+            ViewBag.SelectedCategory = category;
             IEnumerable<string> categories =
                 productRepository.Products.Select(x => x.Category).Distinct().OrderBy(x => x);
 

@@ -31,7 +31,7 @@ namespace FlowerStore.WebUI.Controllers
                 {
                         CurrentPage = page,
                         ItemsPerPage = PageSize,
-                        TotalItems = repository.Products.Count()
+                        TotalItems = repository.Products.Count(x => category == null || x.Category == category)
                 },
 
                 CurrentCategory = category
