@@ -9,3 +9,4 @@ C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.Domain\bin\Debug\EntityFram
 C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.Domain\bin\Debug\EntityFramework.xml
 C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.Domain\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.Domain\obj\Debug\FlowerStore.Domain.csproj.CopyComplete
+C:\Users\Endriu\source\repos\FlowerStore\FlowerStore.Domain\obj\Debug\FlowerStore.Domain.csprojAssemblyReference.cache

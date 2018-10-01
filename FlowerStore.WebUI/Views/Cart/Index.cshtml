@@ -1,0 +1,36 @@
+﻿@model FlowerStore.WebUI.Models.CartIndexViewModel
+
+
+
+
+@{
+    ViewBag.Title = "Kwiaciarenka: Twój koszyk";
+}
+
+
+
+<h2>Twój koszyk</h2>
+<table width="90%" align="center">
+    <thead><tr>
+        <th align="left">Produkt</th>
+        <th align="center">Ilość</th>
+        <th align="right">Cena</th>
+        <th align="right">Wartość</th>
+    </tr></thead>
+    <tbody>
+    @foreach (var line in Model.Cart.Lines)
+    {
+        <tr>
+            <td align="left">@line.Product.Name</td>
+            <td align="center">@line.Quantity</td>
+            <td align="right">@line.Product.Price.ToString("C")</td>
+            <td align="right">@((line.Quantity * line.Product.Price).ToString("c"))</td>
+        </tr>
+    }
+    </tbody>
+    <tfoot><tr>
+        <td colspan="3" align="right">Razem:</td>
+        <td align="right">@Model.Cart.ComputeTotalValue().ToString("C")</td>
+    </tr></tfoot>
+</table>
+<p align="center" class="actionButtons"><a href="@Model.ReturnUrl">Kontytnuuj zakupy</a></p>
