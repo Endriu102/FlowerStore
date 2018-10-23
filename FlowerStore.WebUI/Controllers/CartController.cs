@@ -18,30 +18,30 @@ namespace FlowerStore.WebUI.Controllers
             _repository = repository;
         }
 
-        public ViewResult Index(string returnUrl)
+        public ViewResult Index(Cart cart, string returnUrl)
         {
-            return View(new CartIndexViewModel {Cart = GetCart(), ReturnUrl = returnUrl});
+            return View(new CartIndexViewModel {Cart = cart, ReturnUrl = returnUrl});
         }
 
-        public RedirectToRouteResult AddToCart(int productID, string returnUrl)
+        public RedirectToRouteResult AddToCart(Cart cart, int productID, string returnUrl)
         {
             Product product = _repository.Products.FirstOrDefault(x => x.ProductID == productID);
 
             if (product != null)
             {
-                GetCart().AddItem(product, 1);
+                cart.AddItem(product, 1);
             }
 
             return RedirectToAction("Index", new {returnUrl});
         }
 
-        public RedirectToRouteResult RemoveFromCart(int productId, string returnUrl)
+        public RedirectToRouteResult RemoveFromCart(Cart cart, int productId, string returnUrl)
         {
             Product product = _repository.Products.FirstOrDefault(x => x.ProductID == productId);
 
             if (product != null)
             {
-                GetCart().RemoveLine(product);
+                cart.RemoveLine(product);
             }
 
             return RedirectToAction("Index", new {returnUrl});
@@ -57,6 +57,11 @@ namespace FlowerStore.WebUI.Controllers
             }
 
             return cart;
+        }
+
+        public PartialViewResult Summary(Cart cart)
+        {
+            return PartialView(cart);
         }
     }
 }
