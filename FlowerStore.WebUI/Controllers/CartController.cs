@@ -12,10 +12,12 @@ namespace FlowerStore.WebUI.Controllers
     public class CartController : Controller
     {
         private readonly IProductRepository _repository;
+        private readonly IOrderProcessor orderProcessor;
 
-        public CartController(IProductRepository repository)
+        public CartController(IProductRepository repository, IOrderProcessor orderProcessor)
         {
             _repository = repository;
+            this.orderProcessor = orderProcessor;
         }
 
         public ViewResult Index(Cart cart, string returnUrl)
@@ -62,6 +64,31 @@ namespace FlowerStore.WebUI.Controllers
         public PartialViewResult Summary(Cart cart)
         {
             return PartialView(cart);
+        }
+
+        [HttpPost]
+        public ViewResult Checkout(Cart cart, ShippingDetails shippingDetails)
+        {
+            if (cart.Lines.Count() == 0)
+            {
+                ModelState.AddModelError("", "Koszyk jest pusty!");
+            }
+
+            if (ModelState.IsValid)
+            {
+                orderProcessor.ProcessOrder(cart, shippingDetails);
+                cart.Clear();
+                return View("Completed");
+            }
+            else
+            {
+                return View(shippingDetails);
+            }
+        }
+
+        public ViewResult Checkout()
+        {
+            return View(new ShippingDetails());
         }
     }
 }

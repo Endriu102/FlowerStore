@@ -42,4 +42,6 @@
         <td align="right">@Model.Cart.ComputeTotalValue().ToString("C")</td>
     </tr></tfoot>
 </table>
-<p align="center" class="actionButtons"><a href="@Model.ReturnUrl">Kontytnuuj zakupy</a></p>
+<p align="center" class="actionButtons"><a href="@Model.ReturnUrl">Kontytnuuj zakupy</a>
+    @Html.ActionLink("Zamówienie", "Checkout")
+    </p>
